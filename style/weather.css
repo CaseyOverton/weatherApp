@@ -6,12 +6,7 @@
     height: 1000px;
     width: 300px;
   }
-  .underline {
-      text-align: center;
-      font-size: 30px;
-  display: inline-block;
-  line-height: 0.85;
-}
+  
 * {
   box-sizing: border-box;
 }
@@ -45,4 +40,17 @@ form.example::after {
   content: "";
   clear: both;
   display: table;
+}
+#resultDivCurrent {
+width: auto;
+  height: 650px;
+   text-align: center;
+background-color: honeydew;
+}
+.underline {
+    width: 350px;
+    height: available;
+    height: 650px;
+    float: left;
+    background-color: rosybrown;
 }
