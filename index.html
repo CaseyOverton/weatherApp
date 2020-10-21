@@ -40,6 +40,7 @@
 <div id="resultDivCurrent" ><h1>Current Weather</h1><br><br>
   <div id="backgroundCurrent"></div>
   <h2 id="name"></h2>
+  <h3 id="time"></h3>
   <p id="date"></p>
   <p><img id="icon" ></p>
   <p id="temp"></p>
@@ -66,7 +67,7 @@ src="https://code.jquery.com/jquery-3.5.1.min.js"
 
 const m = moment();
 console.log(m.format("dddd"))
-
+$('#time').text(m.format("MMM Do YY"))
 $('#submit').click(function(event) {
   event.preventDefault();
 city = $('#citySearch').val().trim();
