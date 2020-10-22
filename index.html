@@ -93,6 +93,14 @@ $('#icon').attr('src', icon);
 // console.log(lat);
 });
 });
+$('#future').click(function(event) {
+  event.preventDefault();
+ queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + "b425b03695a7eba465a66c23e09f4645";
+$.ajax({
+  url: forecastUrl,
+  method: "GET"
+}) .then(function (response3) {
+var 
 // CODE THAT ISNT WORKING 
 // $('#uvIbutton').click(function(event) {
 //   event.preventDefault();
