@@ -46,15 +46,22 @@
   <p id="temp"></p>
   <p id="humidity"></p>
   <p id="windSpeed"></p>
+  <br><br>
+  <h1 id="FWC"> Future Weather Conditions </h1>
+<button type="button" id="future" class="btn btn-primary btn-lg">5 Day Forecast</button>
+<div id="day1"></div>
+<div id="day2"></div>
+<div id="day3"></div>
+<div id="day4"></div>
+<div id="day5"></div>
+</div>
 </div>
 <br><br>
 <h1>UV Index</h1>
 <button type="button" id="uvIbutton" class="btn btn-primary btn-lg">Click Here for UV INDEX</button>
   <p id="uvI"></p>
 <br><br>
-<h1 id="FWC"> Future Weather Conditions </h1>
-<button type="button" id="future" class="btn btn-primary btn-lg">5 Day Forecast</button>
-</div>
+
 
 
 
@@ -93,14 +100,24 @@ $('#icon').attr('src', icon);
 // console.log(lat);
 });
 });
-// $('#future').click(function(event) {
-//   event.preventDefault();
-//  queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + "b425b03695a7eba465a66c23e09f4645";
-// $.ajax({
-//   url: forecastUrl,
-//   method: "GET"
-// }) .then(function (response3) {
-// var 
+$('#future').click(function(event) {
+  event.preventDefault();
+  city = $('#citySearch').val().trim();
+ forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + "&id=2172797&appid=b425b03695a7eba465a66c23e09f4645";
+$.ajax({
+  url: forecastUrl,
+  method: "POST"
+}) .then(function (response3) {
+var date2 = $('#day1').text("Date: " + response3.list[0])
+var icon2 = "http://openweathermap.org/img/w/" + icon2 + ".png";
+$('#icon').attr('src', icon);
+});
+});
+// var temp2
+// humidity 
+
+
+
 // // CODE THAT ISNT WORKING 
 // // $('#uvIbutton').click(function(event) {
 //   event.preventDefault();
