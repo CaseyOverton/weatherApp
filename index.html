@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://momentjs.com/downloads/moment.js"> 
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <title>Weather Now</title>
   </head>
   <body>
@@ -26,13 +27,15 @@
         Weather Now
         </a>
       </nav>
-
-    <br>
-    <form  style="margin:auto;max-width:300px">
-      <input id="citySearch" type="text" placeholder="Search City" name="search2">
-      <button id="submit" type="submit"><i class="fa fa-search"></i></button>
-    </form>
-    <Div>
+    <div class="wrap">
+      <div class="search">
+         <input type="text" id="citySearch"class="searchTerm" placeholder="What are you looking for?">
+         <button type="submit" class="searchButton" id="submit">
+           <i class="fa fa-search"></i>
+        </button>
+      </div>
+   </div>
+    <div>
     <h3 id="time"></h3>
   </Div>
 <h1 class="underline">Popular Cities</h1>
@@ -106,7 +109,7 @@ $('#future').click(function(event) {
  forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + "&id=2172797&appid=b425b03695a7eba465a66c23e09f4645";
 $.ajax({
   url: forecastUrl,
-  method: "POST"
+  method: "GET"
 }) .then(function (response3) {
 var date2 = $('#day1').text("Date: " + response3.list[0])
 var icon2 = "http://openweathermap.org/img/w/" + icon2 + ".png";
@@ -157,6 +160,12 @@ function convertKelvin (kelvin) {
     return parseInt((kelvin - 273.15) * 1.8 + 32);
 };
 // });
+
+// <form  style="margin:auto;max-width:300px">
+//   <input id="citySearch" type="text" placeholder="Search City" name="search2">
+//   <button id="submit" type="submit"><i class="fa fa-search"></i></button>
+// </form>
+
 
 </script>
 </body>

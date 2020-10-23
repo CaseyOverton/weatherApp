@@ -8,46 +8,15 @@
   }
   
 * {
-  font-family: 'Francois One', sans-serif;
-  text-decoration-color: darkorange;
+  font-family: 'Raleway', sans-serif;
+  text-decoration-style: wavy;
   box-sizing: border-box;
-}
-
-form.citySearch input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 100%;
-  background: #f1f1f1;
-}
-
-form.submit button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #2196F3;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-}
-
-form.submit button:hover {
-  background: #0b7dda;
-}
-
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 #resultDivCurrent {
 width: auto;
   height: 650px;
    text-align: center;
-background-color: honeydew;
+background-color: rgba(240, 255, 240, 0.89);
 border-radius: 10px;
 }
 .underline {
@@ -55,16 +24,67 @@ border-radius: 10px;
     height: available;
     height: 650px;
     float: left;
-    background-color: rosybrown;
+    background-color: rgba(188, 143, 143, 0.637);
     border-radius: 10px;
 }
-#backgroundCurrent {
-background-color: lightseagreen;
-}
+
 #time {
-  background-color: slateblue;
-  height: 70%;
+  background-color: #00B4CC;
+  height: 60%;
   margin-right: 70%;
   border-radius: 5px;
-  box-shadow: steelblue;
+  box-shadow: grey;
+  
+
+}
+body {
+  background-image: url(../style/ripplesjpeg.jpg);
+  padding: auto;
+}
+/* search bar */
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+  height: 96%;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  height: 50%;
+  margin-left: 30%;
+  /* position: absolute;
+  height:
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
